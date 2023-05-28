@@ -12,7 +12,7 @@ while ($i -gt 0){
     #将数组mkvlist中第(i+1)个对象存入filename
     $filename = $script:mkvlist[$i]
     #调用ffmpeg，将*.mkv中的音频提取为*.flac
-    eac3to "$location\$filename.mkv" 2: "$location\$filename.flac"
+    eac3to "$filename.mkv" 2: "$filename.flac"
 }
 
 Pause
